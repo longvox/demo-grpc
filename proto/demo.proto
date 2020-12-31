@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package demo;
+
+service Demo {
+  rpc unary (unaryRequest) returns (unaryResponse) {}
+  rpc serverStream (serverStreamRequest) returns (stream serverStreamResponse) {}
+  rpc clientStream (stream clientStreamRequest) returns (clientStreamResponse) {}
+  rpc bidirectionalStream (stream bidirectionalStreamRequest) returns (stream bidirectionalStreamResponse) {}
+}
+
+// unary
+message unaryRequest {
+  repeated int32 ids = 1;
+}
+
+message unaryResponse{
+  repeated int32 ids = 1;
+}
+
+// serverStream
+message serverStreamRequest {
+  repeated int32 ids = 1;
+}
+
+message serverStreamResponse {
+  int32 id = 1;
+}
+
+// clientStream
+message clientStreamRequest {
+  int32 id = 1;
+}
+
+message clientStreamResponse {
+  repeated int32 ids = 1;
+}
+
+// bidirectionalStream
+message bidirectionalStreamRequest {
+  int32 id = 1;
+}
+
+message bidirectionalStreamResponse {
+  int32 id = 1;
+}

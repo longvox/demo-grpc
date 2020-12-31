@@ -9,7 +9,8 @@
   "dependencies": {
     "@grpc/proto-loader": "^0.1.0",
     "grpc": "^1.11.0",
-    "lodash": "^4.6.1"
+    "lodash": "^4.6.1",
+    "ts-protoc-gen": "^0.14.1-pre.e680d69"
   },
   "author": "Aditya S",
   "license": "MIT"
